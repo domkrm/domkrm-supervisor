@@ -1,0 +1,40 @@
+{
+  "name": "domkrm-supervisor",
+  "version": "1.0.0",
+  "author": "domkrm",
+  "summary": "Installs and configures Supervisor.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/domkrm/domkrm-supervisor",
+  "project_page": "https://github.com/domkrm/domkrm-supervisor",
+  "issues_url": "https://github.com/domkrm/domkrm-supervisor/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "16.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "tags": [
+    "supervisor",
+    "supervisord"
+  ],
+  "pdk-version": "1.11.1",
+  "template-url": "pdk-default#1.11.1",
+  "template-ref": "1.11.1-0-g2ff8c24"
+}

@@ -1,0 +1,9 @@
+[program:<%= @name %>]
+autostart=<%= @autostart %>
+autorestart=<%= @autorestart %>
+command=<%= @command %>
+user=<%= @user %>
+<%- if @numprocs > 1 -%>
+numprocs=<%= @numprocs %>
+process_name=%(process_num)03d
+<%- end -%>
