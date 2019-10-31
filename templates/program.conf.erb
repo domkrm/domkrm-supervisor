@@ -5,5 +5,5 @@ command=<%= @command %>
 user=<%= @user %>
 <%- if @numprocs > 1 -%>
 numprocs=<%= @numprocs %>
-process_name=%(process_num)03d
+process_name=%(program_name)s_%(process_num)02d
 <%- end -%>
