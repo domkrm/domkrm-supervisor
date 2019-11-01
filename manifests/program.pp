@@ -21,4 +21,14 @@ define supervisor::program (
     require => Package['supervisor']
   }
 
+  # Ensure program is running
+  service { "supervisor-${name}":
+    ensure   => running,
+    path     => '/bin:/usr/bin:/sbin:/usr/sbin',
+    provider => base,
+    start    => "supervisorctl start ${name}:*",
+    status   => "supervisorctl status ${name}:* | grep -cv 'RUNNING' | grep '^0$'",
+    require  => File["/etc/supervisor/conf.d/${name}.conf"]
+  }
+
 }
