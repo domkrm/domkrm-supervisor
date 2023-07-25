@@ -28,7 +28,7 @@ define supervisor::program (
     provider => base,
     start    => "supervisorctl start ${name}:*",
     status   => "supervisorctl status ${name}:* | grep -cv 'RUNNING' | grep '^0$'",
-    require  => File["/etc/supervisor/conf.d/${name}.conf"]
+    require  => [File["/etc/supervisor/conf.d/${name}.conf"], Exec['supervisor-update']]
   }
 
 }
